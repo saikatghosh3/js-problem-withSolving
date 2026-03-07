@@ -63,3 +63,31 @@ const personOne = {
 }
 
 console.log(personOne.city.zip);
+
+// 9. convert an object into  array 
+const car = {
+    brand : "Totota", 
+    model: "corolla", 
+    year: 2020
+}
+
+const arr = Object.entries(car);
+console.log(arr);
+
+// 10. Find the highest value in Object 
+const marks = {
+  Rahim: 80,
+  Karim: 95,
+  Hasan: 88
+};
+
+let highestName = "";
+let highestMark = 0;
+
+for (let student in marks){
+    if(marks[student]> highestMark){
+        highestMark = marks[student];
+        highestName = student;
+    }
+}
+console.log(highestName + " scored highest: " + highestMark);
