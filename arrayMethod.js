@@ -12,7 +12,7 @@ console.log(double);
 //3. sum of array 
 const arr2 = [10,30 ,49];
 const sumNumbers = arr.reduce((sum, num)=> sum + num, 0);
-
+ 
 console.log(sumNumbers);
 
 //4. Find the first  user above 18;
@@ -63,3 +63,33 @@ console.log(getName);
 const marks = [50, 60, 70, 30];
 const allPassed = marks.every(mark => mark >= 40);
 console.log(allPassed);
+
+// 10. return sqaure of each Number
+const numbers = [12,34,53];
+const sqaureNumbers = numbers.map(num=> num * num);
+console.log(sqaureNumbers); 
+
+// 11. extract all emails from users 
+ const usersWithEmails = [
+  {name:"A", email:"a@gmail.com"},
+  {name:"B", email:"b@gmail.com"}
+];
+
+const emails = usersWithEmails.map(user => user.email);
+console.log(emails);
+
+// 12. Return products with price 1000
+
+const products = [
+  {name:"Phone", price:800},
+  {name:"Laptop", price:50000},
+  {name:"Mouse", price:500}
+];
+
+const expensive = products.filter(p => p.price > 1000);
+console.log(expensive);
+
+// 13. find the first even numbers 
+const numbers = [13,,23,4,5,6];
+const firstEven = numbers.find(p => p % 2 ===0 );
+console.log(firstEven);
