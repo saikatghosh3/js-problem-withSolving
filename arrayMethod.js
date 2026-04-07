@@ -93,3 +93,40 @@ console.log(expensive);
 const numbers = [13,,23,4,5,6];
 const firstEven = numbers.find(p => p % 2 ===0 );
 console.log(firstEven);
+
+// 14. check if any user is admin  
+const users = [
+  {name:"A", isAdmin:false},
+  {name:"B", isAdmin:true}
+];
+
+const hasAdmin = users.some(user=> user.isAdmin);
+console.log(hasAdmin);
+
+// 15. check if all the Products in stock 
+const products = [
+  {name:"A", inStock:true},
+  {name:"B", inStock:true}
+];
+
+const inStock = products.every(p=> p.inStock);
+console.log(inStock);
+
+
+// 16. Total price of cart 
+const cart = [
+  {name:"Phone", price:1000},
+  {name:"Laptop", price:2000}
+];
+
+const TotalPrice = cart.reduce((sum, item)=> sum + item, 0);
+console.log(TotalPrice);
+
+// 17.  count passed Students 
+
+const marks = [12,30,50,70];
+const passed = marks.filter(mark => mark > 40).length;
+console.log(passed);
+
+// .lenght retuns only number 
+// but without it will return only new array.
