@@ -61,3 +61,50 @@ function sumArray(arr){
 }
 
 console.log(sumArray([1,23,4,5,67,88]));
+
+
+// 7. find the even numbers from array 
+ 
+function findEven(arr){
+    let result = [];
+    for(let i = 0; i<= arr.length; i++){
+      if(arr[i] %2 == 0){
+        result.push(arr[i]);
+      }
+    }
+    return result;
+}
+console.log(findEven([1,2,3,54,56,7,8]));
+
+// 8. check the string is palindrome
+
+function isPalindrome(str){
+    let reversed = str.split("").reverse().join("");
+    return str===reversed;
+}
+
+console.log(isPalindrome("madam"));
+
+// 9. find the largest Number in Array 
+function isalargest(arr){
+    let max = arr[0];
+    for(let i = 0; i<=arr.length; i++){
+        if(arr[i]> max){
+            max = arr[i]
+        }
+    }
+    return max;
+}
+console.log(isalargest([12,3,4,7567,3]));
+
+// 10. retun names of users age > 25;
+const users = [
+  {name:"A", age:20},
+  {name:"B", age:30},
+  {name:"C", age:28}
+];
+
+function oldUsers(users){
+    return users.filter(user => user.age > 25).map(user => user.name);
+}
+console.log(oldUsers(users));
