@@ -83,3 +83,4 @@ function accessDashboard (isLoggedIn, isVerified){
 
 console.log(accessDashboard(true, true));
 console.log(accessDashboard(true, false));
+
