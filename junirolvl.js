@@ -166,4 +166,107 @@ function getTopStudent(students) {
   return top;
 }
 
-console.log(getTopStudent(students))
+console.log(getTopStudent(students));
+
+
+
+
+// solving with method.
+// find the negetive number :
+function findNegetive(arr){
+  return arr.filter(num => num <0)
+}
+console.log(findNegetive([2,3,5,-6,-8]));
+
+
+// find the average number 
+function findAverage(arr){
+  return arr.reduce((sum, num)=> sum + num , 0)/arr.length
+}
+console.log(findAverage([1,2,3,45,67,5]));
+
+
+
+// get the user name 
+
+const users = [
+  { id: 1, name: "Saikat", age: 25 },
+  { id: 2, name: "Rahim", age: 30 },
+  { id: 3, name: "Karim", age: 22 }
+];
+
+
+function getName(arr){
+  return arr.map(user => user.name)
+}
+
+console.log(getName(users))
+
+
+
+// filter the 18+ users 
+
+const users = [
+  { name: "A", age: 17 },
+  { name: "B", age: 25 },
+  { name: "C", age: 20 }
+];
+
+function getAdult(arr){
+return  arr.filter(user => user.age > 18)
+}
+console.log(getAdult(users));
+
+
+// calculate total cart price 
+
+const cart = [
+  {
+    product: "Laptop",
+    price: 50000,
+    quantity: 1
+  },
+  {
+    product: "Mouse",
+    price: 500,
+    quantity: 2
+  }
+];
+
+function findTotal (arr){
+  return arr.reduce((sum, num)=> sum + num.price * num.quantity, 0)
+}
+
+console.log(findTotal(cart))
+
+
+// sort products by price 
+const products = [
+  {name:"Laptop", price:50000},
+  {name:"Mouse", price:500},
+  {name:"Phone", price:30000}
+];
+
+function sortProducts (arr){
+   return arr.sort((a,b)=> a.price - b.price)
+}
+console.log(sortProducts(products));
+
+
+//get total marks 
+const students = [
+ {
+  name:"A",
+  marks:80
+ },
+ {
+  name:"B",
+  marks:90
+ }
+];
+
+function totalMarks(arr){
+  return arr.reduce((sum, student)=> sum + student.marks, 0);
+}
+
+console.log(totalMarks(students))
