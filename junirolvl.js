@@ -93,3 +93,77 @@ function sumObjectValues(obj){
     return sum;
 }
 console.log(sumObjectValues(obj));
+
+
+// if a particular number is present in an array or not 
+
+function exists(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+console.log(exists([2,3,4,5,6], 4));
+
+
+// find the odd number sum 
+
+function sumOfOdd(arr){
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 !== 0){
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+
+console.log(sumOfOdd([1,2,3,4,5]));
+
+
+// count the words in a str 
+function wordCount(str){
+  return str.trim().split(" ").length;
+}
+console.log((wordCount("hi my name is saikat ")));
+
+
+// merge the two array 
+function mergeArray(arr1, arr2){
+  return [...arr1, ...arr2]
+}
+console.log(mergeArray([1,2,3,5], [35,6,7,88,89]))
+
+// double the nubmer of array 
+
+function doubleNumber(arr){
+  return arr.map(num => num* 2)
+}
+console.log(doubleNumber([1,3,45,6]));
+
+
+// who has got the highest marks 
+
+const students = [
+  { name: "Rahim", marks: 70 },
+  { name: "Karim", marks: 95 },
+  { name: "Jony", marks: 80 }
+];
+
+function getTopStudent(students) {
+  let top = students[0];
+
+  for (let i = 1; i < students.length; i++) {
+    if (students[i].marks > top.marks) {
+      top = students[i];
+    }
+  }
+
+  return top;
+}
+
+console.log(getTopStudent(students))
