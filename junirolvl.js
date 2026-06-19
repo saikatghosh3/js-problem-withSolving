@@ -270,3 +270,55 @@ function totalMarks(arr){
 }
 
 console.log(totalMarks(students))
+
+
+
+//remove all duplicate  numbers form array 
+function removeDuplicate(arr){
+  return [...new Set(arr)]
+}
+console.log(removeDuplicate([12,4,4,4,5,6,8,9]))
+
+
+// object related. 
+// make a object and acceess the value 
+
+const person = {
+  name: "saikat",
+  age: 25
+};
+
+console.log(person.name);
+console.log(person.age);
+
+
+
+// use a function and access the property using this
+
+const user ={
+name: "Rohan",
+age: 25, 
+sayHi: function(){
+  console.log(`Hi, my name is ${this.name}`);
+  
+}
+
+}
+user.sayHi();
+
+
+
+
+
+// constructor function 
+
+function User(userName, userAge) {
+  this.name = userName;
+  this.age = userAge;
+}
+
+const user1 = new User("Rohan", 25);
+const user2 = new User("zashim", 30);
+
+console.log(user1);
+console.log(user2);
