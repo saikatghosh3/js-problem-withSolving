@@ -91,3 +91,94 @@ for (let student in marks){
     }
 }
 console.log(highestName + " scored highest: " + highestMark);
+
+
+
+
+// create a price list 
+const products=[
+{
+name:"Laptop",
+price:50000
+},
+{
+name:"Phone",
+price:30000
+}
+];
+
+function listPrice(arr){
+   return arr.map(product =>{
+return`${product.name}: ${product.price}`
+    });
+}
+
+console.log(listPrice(products));
+
+// get top highest numbers 
+function highestNumbers (arr){
+    return arr.sort((a,b)=>b-a).slice(0,3)
+}
+console.log(highestNumbers([40,55,68,90,787]));
+
+
+// sort name alphabetically 
+const names = [
+  "Karim",
+  "Rahim",
+  "Abir",
+  "Saikat"
+];
+function SortAlphabetically(arr){
+    return arr.sort();
+}
+console.log(SortAlphabetically(names));
+
+// count the active user 
+function countActiveUser(arr){
+    return arr.filter(user=> user.active).length;
+}
+const users = [
+  { active: true },
+  { active: true },
+  { active: false }
+];
+
+console.log(countActiveUser(users));
+
+
+
+// Remove user without email
+const users = [
+  {
+    name: "A",
+    email: "a@gmail.com"
+  },
+  {
+    name: "B"
+  }
+];
+
+
+
+function  withoutEmail(arr){
+    return arr.filter(user => user.email);
+}
+console.log(withoutEmail(users));
+
+
+
+// find a product if it is outofStock
+const products = [
+  { id: 1, name: "Laptop", price: 50000, stock: 10 },
+  { id: 2, name: "Phone", price: 30000, stock: 0 },
+  { id: 3, name: "Headphones", price: 2000, stock: 0 },
+  { id: 4, name: "Mouse", price: 1500, stock: 5 }
+];
+
+
+function outOfStock(arr){
+    return arr.filter(product =>product.stock === 0).map(p=>p.name)
+}
+
+console.log(outOfStock(products));

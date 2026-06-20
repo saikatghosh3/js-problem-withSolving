@@ -322,3 +322,12 @@ const user2 = new User("zashim", 30);
 
 console.log(user1);
 console.log(user2);
+
+// sometimes it is difficult to to loop over object so sometimes we use built in method.
+const inventory = {
+    laptop: 50000,
+    phone: 25000,
+    watch: 5000
+};
+const productNames = Object.keys(inventory);
+console.log(productNames)
